@@ -1,0 +1,10 @@
+fastapi 
+uvicorn 
+pandas 
+scikit-learn 
+surprise 
+requests
+geopy
+sqlalchemy
+pymysql
+cryptography
