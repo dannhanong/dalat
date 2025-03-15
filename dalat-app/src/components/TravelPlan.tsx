@@ -512,9 +512,9 @@ const TravelPlan: React.FC<TravelPlanProps> = ({
 
                 {/* Right Section */}
                 <Grid item xs={12} md={8}>
-                    <CustomBox>
+                    {/* <CustomBox> */}
                         {/* Why choose us section - giữ nguyên */}
-                        <Typography variant="h6" color="#f59e0b">
+                        {/* <Typography variant="h6" color="#f59e0b">
                             Why choose us?
                         </Typography>
                         <ul className="list-disc pl-5 mt-2">
@@ -526,8 +526,8 @@ const TravelPlan: React.FC<TravelPlanProps> = ({
                         </ul>
                         <Typography mt={2}>Do you need support?</Typography>
                         <Typography>You need support online please contact us.</Typography>
-                        <Typography color="#007bff">02633822342</Typography>
-                    </CustomBox>
+                        <Typography color="#007bff">02633822342</Typography> */}
+                    {/* </CustomBox> */}
 
                     {/* Map Section with Day Tabs */}
                     <CustomBox>
