@@ -68,7 +68,10 @@ export default function Wishlist() {
     });
 
     return (
-        <div className="container mx-auto p-6">
+        <div 
+            className="container mx-auto p-6"
+            style={{ minHeight: 500 }}
+        >
             <h1 className="text-3xl font-bold mb-6 text-gray-800">Danh Sách Yêu Thích</h1>
 
             {/* Thanh tìm kiếm */}

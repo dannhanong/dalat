@@ -36,8 +36,11 @@ public class FileUploadServiceImpl implements FileUploadService {
         }
 
         String fileCode = UUID.randomUUID().toString();
+        String originalFileName = multipartFile.getOriginalFilename();
+        String fileExtension = originalFileName.substring(originalFileName.lastIndexOf("."));
+
         try (InputStream inputStream = multipartFile.getInputStream()) {
-            Path filePath = uploadDirectory.resolve(fileCode);
+            Path filePath = uploadDirectory.resolve(fileCode + fileExtension);
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new IOException("Error saving file: ", e);
@@ -46,12 +49,11 @@ public class FileUploadServiceImpl implements FileUploadService {
         FileUpload fileUpload = new FileUpload();
 
         // Extract file extension
-        String originalFileName = multipartFile.getOriginalFilename();
-        String fileExtension = originalFileName.substring(originalFileName.lastIndexOf("."));
+        
 
         fileUpload.setFileName(StringUtils.cleanPath(multipartFile.getOriginalFilename()));
         fileUpload.setFileType(fileExtension);
-        fileUpload.setFileCode(fileCode);
+        fileUpload.setFileCode(fileCode + fileExtension);
         fileUpload.setSize(multipartFile.getSize());
         return fileUploadRepository.save(fileUpload);
     }

@@ -439,7 +439,7 @@ const PlaceSelectionDialog: React.FC<PlaceSelectionDialogProps> = ({ open, onClo
                                         }}
                                     >
                                         <Avatar
-                                            src={place.image || '/images/placeholder.jpg'}
+                                            src={`${process.env.NEXT_PUBLIC_API_URL}/files/preview/${place.imageCode}` || '/images/placeholder.jpg'}
                                             alt={place.name}
                                             sx={{ width: 70, height: 70, mr: 2 }}
                                             variant="rounded"

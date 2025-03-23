@@ -144,7 +144,7 @@ const Navbar = () => {
             )
           }
           <li><Link href="/festival" className="hover:text-orange-500">Lễ hội</Link></li>
-          <li><Link href="#" className="hover:text-orange-500">Liên hệ</Link></li>
+          {/* <li><Link href="#" className="hover:text-orange-500">Liên hệ</Link></li> */}
           <li>
             {
               isAuthenticated() ? (

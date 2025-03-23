@@ -248,7 +248,7 @@ export default function Index() {
                         ))
                     ) : (
                         <TableRow>
-                            <TableCell colSpan={6} align="center">
+                            <TableCell colSpan={12} align="center">
                                 Không có dữ liệu
                             </TableCell>
                         </TableRow>
